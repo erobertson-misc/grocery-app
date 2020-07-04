@@ -29,8 +29,10 @@ class ItemListResultState extends State<ItemListResult> {
 		else
 			return [ 
 				IconIndicator(icon : Icons.info, inverse: active), 
-				Column( children: [
-					ToggledText( active: active, text: widget.item.name, scale : 1.4),
+				Column( 
+					crossAxisAlignment: CrossAxisAlignment.start,
+					children: [
+					ToggledText( active: active, text: widget.item.name, scale : 1.3),
 					ToggledText( active: active, text: widget.item.expected.toString() + ' expected', scale : 0.8),
 				])
 			];

@@ -23,7 +23,7 @@ class DataViewHeader extends StatelessWidget {
 				children: [
 					Row(children: [
 						PaddedIconButton(icon : Icons.arrow_back_ios, onTap: (){ Navigator.pop(context); }),
-						Text(title, style: TextStyle( color: icons, fontSize: 18))
+						Text(title.length > 20 ?  title.substring(0,20) + '...' : title, style:  TextStyle( color: icons, fontSize: 18))
 					]),
 					Row( children: [
 						onCreate == null ? Text('') : PaddedIconButton(icon : Icons.add, onTap: onCreate ),
